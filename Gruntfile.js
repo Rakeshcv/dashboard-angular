@@ -476,6 +476,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('deploy_live',[
+    'newer:jshint',
+    'build',
     'buildcontrol:pages'
   ]);
 };
