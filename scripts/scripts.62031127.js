@@ -1,0 +1,1 @@
+"use strict";angular.module("dashboardApp",["ngAnimate","ngCookies","ngResource","ngRoute","ngSanitize","ngTouch"]);
