@@ -10,6 +10,8 @@
 angular.module('dashboardApp')
   .controller('DashboardmenuCtrl', ['$scope','$rootScope',function ($scope,$rootScope) {
 
+    $scope.showMenu = true;
+
     this.getActiveElement = function(){
       return $scope.activeElement;
     };
@@ -21,5 +23,9 @@ angular.module('dashboardApp')
     this.setRoute = function (route){
       $rootScope.$broadcast('menu-route',{route:route});
     };
+
+    $scope.$on('show-menu',function(event,data){
+      $scope.showMenu = data.show;
+    });
 
   }]);

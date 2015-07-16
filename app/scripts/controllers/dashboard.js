@@ -8,10 +8,12 @@
  * Controller of the dashboardApp
  */
 angular.module('dashboardApp')
-  .controller('DashboardCtrl',['$scope','$window','$timeout', function ($scope,$window,$timeout) {
+  .controller('DashboardCtrl',['$scope','$window','$timeout','$rootScope', function ($scope,$window,$timeout,$rootScope) {
 
     $scope.$on('menu-route', function (event, data) {
       $scope.routeString = data.route;
+      checkWidth();
+      broadcastMenuState();
     });
 
 
@@ -19,6 +21,7 @@ angular.module('dashboardApp')
       $scope.$apply(function () {
 
         checkWidth();
+        broadcastMenuState();
       })
     });
 
@@ -33,12 +36,18 @@ angular.module('dashboardApp')
       $scope.isMenuButtonVisible = ! $scope.isMenuVisible;
     }
 
+    var broadcastMenuState = function () {
+      $rootScope.$broadcast('show-menu',{show:$scope.isMenuVisible});
+    };
+
+
     $scope.menuButtonClicked = function(){
       $scope.isMenuVisible = !$scope.isMenuVisible;
-      $scope.$apply();
+      broadcastMenuState();
     };
 
     $timeout(function () {
       checkWidth();
+      broadcastMenuState();
     },0);
   }]);
