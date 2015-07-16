@@ -16,6 +16,22 @@ angular.module('dashboardApp')
         icon: '@',
         route: '@'
       },
-      templateUrl: 'views/dashboardmenuitemtemplate.html'
+      templateUrl: 'views/dashboardmenuitemtemplate.html',
+      link: function(scope,el,attr,ctrl){
+
+        el.on('click', function (e) {
+          e.stopPropagation();
+          e.preventDefault();
+          scope.$apply(function () {
+            ctrl.setActiveElement(el);
+            ctrl.setRoute(scope.route);
+          });
+        });
+
+
+        scope.isActive = function(){
+          return el === ctrl.getActiveElement();
+        };
+      }
     };
   });

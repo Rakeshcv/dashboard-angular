@@ -19,5 +19,5 @@ angular.module('dashboardApp')
       link: function(scope,el,attr){
 
       }
-    }
+    };
   });

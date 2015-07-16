@@ -8,6 +8,6 @@
  * Controller of the dashboardApp
  */
 angular.module('dashboardApp')
-  .controller('DashboardCtrl', function ($scope) {
+  .controller('DashboardCtrl',['$scope', function ($scope) {
 
-  });
+  }]);
