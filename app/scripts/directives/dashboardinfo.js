@@ -11,6 +11,11 @@ angular.module('dashboardApp')
     return {
       transclude: false,
       restrict: 'AE',
+      scope: {
+        title: '@',
+        subtitle: '@',
+        iconUrl: '@'
+      },
       templateUrl: 'views/dashboardtemplate.html',
       controller: 'DashboardCtrl'
     };
