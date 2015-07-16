@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/dashboard.css"/>
+    <link rel="stylesheet" href="styles/menu.css"/>
     <!-- endbuild -->
   </head>
   <body ng-app="dashboardApp" class="container-fluid">
@@ -24,6 +25,12 @@
     <dashboard-info title="R V Dashboard"
                     subtitle="Less is More"
                     icon-url='images/taco.png'>
+
+      <dashboard-menu>
+        <dashboard-menu-item label="Dashboard" icon="fa-tachometer" route="home"></dashboard-menu-item>
+        <dashboard-menu-item label="Menu 1" icon="fa-bus" route="menu1"></dashboard-menu-item>
+        <dashboard-menu-item label="Menu 2" icon="fa-university" route="menu2"></dashboard-menu-item>
+      </dashboard-menu>
 
     </dashboard-info>
 
@@ -58,6 +65,9 @@
         <script src="scripts/directives/dashboardinfo.js"></script>
         <script src="scripts/controllers/dashboard.js"></script>
         <script src="scripts/decorators/exceptiondecorator.js"></script>
+        <script src="scripts/directives/dashboardmenu.js"></script>
+        <script src="scripts/directives/dashboardmenuitem.js"></script>
+        <script src="scripts/controllers/dashboardmenu.js"></script>
         <!-- endbuild -->
 </body>
 </html>

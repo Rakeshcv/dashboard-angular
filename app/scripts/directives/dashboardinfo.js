@@ -8,15 +8,14 @@
  */
 angular.module('dashboardApp')
   .directive('dashboardInfo', function () {
-    return {
-      transclude: false,
-      restrict: 'AE',
+    return{
+      transclude: true,
       scope: {
         title: '@',
         subtitle: '@',
         iconUrl: '@'
       },
-      templateUrl: 'views/dashboardtemplate.html',
-      controller: 'DashboardCtrl'
-    };
+      controller: 'DashboardCtrl',
+      templateUrl: 'views/dashboardtemplate.html'
+    }
   });

@@ -1,0 +1,89 @@
+.menu-area{
+  background-color: #5e5e5e;
+  color: #222222;
+  position: relative;
+  padding-left: 0;
+  width: 200px;
+  min-height: 100vh;
+  padding-top: 30px;
+
+}
+
+.menu-area ul{
+  padding-left: 0;
+}
+
+.menu{
+  list-style-type: none;
+  color: inherit;
+  vertical-align: top;
+}
+
+.menu-area .btn:hover {
+  color: #ccc;
+}
+
+.menu ul {
+  display: inline;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu li {
+  line-height: 3em;
+  cursor: pointer;
+}
+
+
+
+.selectable-menu:hover{
+  background-color: #777777;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.icons{
+  margin-right: 10px;
+}
+
+.menu li div{
+  display: inline-block;
+  width: 90%;
+  padding-left: 16px;
+}
+
+.active{
+  margin-top: 8px;
+  color: #8c8c8c;
+  float: right;
+  margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
