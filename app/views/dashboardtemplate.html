@@ -10,6 +10,13 @@
         <p class="logo-subtitle">{{subtitle}}</p>
       </div>
 
+      <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked" class="collapsed-menu pull-right">
+        <button type="button" class="nbutton">
+
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+
     </div>
     <div class="right-side-controls col-sm-6">
       <div>
@@ -22,3 +29,9 @@
 </div>
 
 <div ng-transclude=""></div>
+
+<!--For Debugging Purpose-->
+<div style="position: absolute;left: 220px;top: 200px;color: red;font-size: 44px;">
+
+  {{routeString}}
+</div>
