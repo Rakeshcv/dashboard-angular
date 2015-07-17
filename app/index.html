@@ -35,6 +35,10 @@
         <dashboard-menu-item label="Dashboard" icon="fa-tachometer" route="home"></dashboard-menu-item>
         <dashboard-menu-item label="Menu 1" icon="fa-bus" route="menu1"></dashboard-menu-item>
         <dashboard-menu-item label="Menu 2" icon="fa-university" route="menu2"></dashboard-menu-item>
+        <dashboard-menu-group label="Sub-Menu" icon="fa fa-bars">
+          <dashboard-menu-item label="submenu1" icon="fa-bus" route="submenu1"></dashboard-menu-item>
+          <dashboard-menu-item label="submenu2" icon="fa-university" route="submenu2"></dashboard-menu-item>
+        </dashboard-menu-group>
       </dashboard-menu>
 
     </dashboard-info>
@@ -73,6 +77,7 @@
         <script src="scripts/directives/dashboardmenu.js"></script>
         <script src="scripts/directives/dashboardmenuitem.js"></script>
         <script src="scripts/controllers/dashboardmenu.js"></script>
+        <script src="scripts/directives/dashboardmenugroup.js"></script>
         <!-- endbuild -->
 </body>
 </html>

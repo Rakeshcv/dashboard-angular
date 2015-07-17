@@ -50,4 +50,9 @@ angular.module('dashboardApp')
       checkWidth();
       broadcastMenuState();
     },0);
+
+
+    $scope.$on('menu-orientation', function (event, data) {
+      $scope.isMenuVertical = data.isMenuVertical;
+    })
   }]);

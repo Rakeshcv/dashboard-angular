@@ -1,0 +1,10 @@
+<li class="selectable-menu" ng-click="clicked();" ng-class="{'menu-item-horizontal': !isVertical()}">
+  <div class="no-select">
+    <i class="fa {{icon}} icons"></i>{{label}}
+    <i class="fa fa-chevron-circle-left group-indicator" ng-class="{'fa-rotate-270':isOpen}" ng-if="isVertical();"></i>
+  </div>
+</li>
+
+<div ng-show="isOpen" class="indent" ng-class="{'pop-submenu': !isVertical()}">
+  <ul ng-transclude=""></ul>
+</div>

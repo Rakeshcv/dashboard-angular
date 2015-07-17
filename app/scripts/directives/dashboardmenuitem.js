@@ -28,6 +28,10 @@ angular.module('dashboardApp')
           });
         });
 
+        scope.isVertical = function(){
+          return ctrl.isVertical() || el.parents('.indent').length > 0;
+        };
+
 
         scope.isActive = function(){
           return el === ctrl.getActiveElement();
