@@ -116,6 +116,14 @@
   background-color: #5e5e5e;
 }
 
+.fade-in-effect{
+  transition: linear all 0.5s;
+}
+
+.fade-in-effect.ng-hide{
+  opacity: 0;
+}
+
 
 
 
